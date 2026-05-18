@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Palette — japonaise contrastée (refacto) ──────────────────── */
+  /* Tons clairs */
+  --color-paper: #fbf6ea;            /* washi naturel — fond principal, plus pigmenté qu'avant */
+  --color-paper-warm: #f1e6c8;       /* sable doré franchement distinct */
+  --color-cream: #d9c89a;             /* sable foncé pour séparations marquées */
+  --color-sand: #b89e6c;              /* sable bronze */
+
+  /* Tons sombres */
+  --color-ink: #0a0a0a;               /* noir profond — texte principal */
+  --color-deep: #141414;              /* zone sombre */
+  --color-deeper: #050505;            /* nuit absolue */
+  --color-muted: #4a3f33;             /* taupe foncé — contraste AA garanti sur paper */
+  --color-muted-soft: #8a7c6c;        /* tertiaire */
+
+  /* Signature japonaise */
+  --color-brand: #c13b1f;             /* vermillon / cinabre 朱 */
+  --color-brand-deep: #8c1f0a;        /* vermillon foncé — hover */
+  --color-brand-light: #e57b62;       /* vermillon pâle */
+
+  --color-gold: #d4a84a;              /* or antique plus saturé */
+  --color-gold-deep: #927327;
+  --color-accent: #406b50;            /* jade / thé matcha */
+  --color-accent-deep: #2d4f3a;
+  --color-indigo: #1b365d;            /* indigo 藍 */
+
+  /* États */
+  --color-success: #406b50;
+  --color-warning: #c4a14a;
+  --color-error: #8c1f0a;
+
+  /* ─── Typographies (next/font) ─────────────────────────────────── */
+  --font-body: var(--font-body), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  --font-jp: var(--font-jp), "Noto Serif JP", "Hiragino Mincho ProN", serif;
+
+  /* ─── Radius ───────────────────────────────────────────────────── */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2.5rem;
+  --radius-pill: 9999px;
+
+  /* ─── Shadows — plus marquées ──────────────────────────────────── */
+  --shadow-sm: 0 1px 3px 0 rgb(10 10 10 / 0.14);
+  --shadow-md: 0 8px 20px -4px rgb(10 10 10 / 0.18), 0 3px 6px -2px rgb(10 10 10 / 0.12);
+  --shadow-lg: 0 28px 60px -16px rgb(10 10 10 / 0.30), 0 6px 12px -4px rgb(10 10 10 / 0.18);
+  --shadow-xl: 0 50px 100px -20px rgb(10 10 10 / 0.40);
+  --shadow-warm: 0 24px 50px -16px rgb(193 59 31 / 0.55);
+  --shadow-gold: 0 20px 50px -16px rgb(212 168 74 / 0.45);
+  --shadow-sage: 0 20px 50px -16px rgb(64 107 80 / 0.40);
+
+  /* ─── Animations ───────────────────────────────────────────────── */
+  --ease-shibumi: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-ma: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Reset & base ─────────────────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    line-height: 1.65;
+    text-wrap: pretty;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    font-weight: 400;
+    color: var(--color-ink);
+  }
+
+  /* Focus visible — fortement marqué */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background-color: var(--color-brand);
+    color: var(--color-paper);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ─── Utilities composites ─────────────────────────────────────────── */
+@layer utilities {
+  .container-main {
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    .container-main {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Section sombre dramatique — sert pour les sections de break */
+  .section-ink {
+    background-color: var(--color-deeper);
+    color: var(--color-paper);
+  }
+
+  /* Hairline séparateur visible */
+  .hairline-top {
+    border-top: 1px solid rgb(10 10 10 / 0.15);
+  }
+  .hairline-bottom {
+    border-bottom: 1px solid rgb(10 10 10 / 0.15);
+  }
+  .hairline-paper-top {
+    border-top: 1px solid rgb(253 250 243 / 0.18);
+  }
+  .hairline-paper-bottom {
+    border-bottom: 1px solid rgb(253 250 243 / 0.18);
+  }
+
+  /* Kanji watermark — opacité un peu plus présente */
+  .kanji-watermark {
+    font-family: var(--font-jp);
+    font-weight: 300;
+    color: var(--color-brand);
+    opacity: 0.06;
+    pointer-events: none;
+    user-select: none;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+  }
+  .kanji-watermark-gold { color: var(--color-gold); opacity: 0.08; }
+  .kanji-watermark-paper { color: var(--color-paper); opacity: 0.08; }
+  .kanji-watermark-ink { color: var(--color-ink); opacity: 0.05; }
+
+  /* Mesh vermillon — RÉSERVÉ au hero seulement, pas d'overlay flou ailleurs */
+  .mesh-vermillon {
+    background:
+      radial-gradient(at 25% 0%, rgb(193 59 31 / 0.40) 0px, transparent 50%),
+      radial-gradient(at 85% 100%, rgb(140 31 10 / 0.30) 0px, transparent 50%);
+    background-color: var(--color-deeper);
+  }
+
+  /* Eyebrow japonais — fortement marqué */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--color-brand);
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background-color: currentColor;
+  }
+
+  /* Italic display mark */
+  .ital-mark {
+    font-style: italic;
+    color: var(--color-brand);
+  }
+  .ital-mark-gold { color: var(--color-gold); }
+  .ital-mark-paper { color: var(--color-paper); }
+
+  /* Link underline élégant */
+  .link-elegant,
+  .link-craft {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 250ms var(--ease-shibumi);
+  }
+  .link-elegant:hover,
+  .link-craft:hover { background-size: 100% 2px; }
+
+  /* Divider décoratif vermillon */
+  .divider-vermillon {
+    width: 3rem;
+    height: 2px;
+    background-color: var(--color-brand);
+    margin: 1.5rem 0;
+  }
+
+  /* Card de plat — bord fortement marqué */
+  .card-dish {
+    background-color: var(--color-paper);
+    border: 1px solid rgb(10 10 10 / 0.12);
+    box-shadow: var(--shadow-sm);
+    transition: all 350ms var(--ease-shibumi);
+  }
+  .card-dish:hover {
+    border-color: var(--color-brand);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  /* Card sombre — pour sections sur ink */
+  .card-dish-dark {
+    background-color: rgb(253 250 243 / 0.05);
+    border: 1px solid rgb(253 250 243 / 0.12);
+    color: var(--color-paper);
+    transition: all 350ms var(--ease-shibumi);
+  }
+  .card-dish-dark:hover {
+    background-color: rgb(253 250 243 / 0.10);
+    border-color: var(--color-gold);
+    transform: translateY(-2px);
+  }
+
+  /* Pattern dots — plus visible */
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgb(10 10 10 / 0.20) 1px, transparent 1px);
+    background-size: 14px 14px;
+  }
+
+  /* ─── Animations ──────────────────────────────────────────────── */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 42s linear infinite;
+  }
+
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .animate-float {
+    animation: float-y 6s ease-in-out infinite;
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .animate-rotate-slow {
+    animation: rotate-slow 28s linear infinite;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 800ms var(--ease-shibumi) both;
+  }
+
+  /* Radix Accordion */
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  .animate-accordion-down {
+    animation: accordion-down 200ms var(--ease-shibumi);
+  }
+  .animate-accordion-up {
+    animation: accordion-up 200ms var(--ease-shibumi);
+  }
+}

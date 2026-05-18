@@ -1,0 +1,87 @@
+import type { MenuItem } from "./types";
+
+/**
+ * Menus midi servis du mardi au vendredi (hors jours fériés), 12h00–13h30.
+ * Prix unique 16,90 € — sur place ou à emporter.
+ */
+export const menusMidi: ReadonlyArray<MenuItem> = [
+  {
+    slug: "midi-assortiments",
+    name: "Assortiments Midi",
+    priceEur: 16.9,
+    description: "L'équilibre parfait pour une pause midi gourmande.",
+    ingredients: ["8 California Roll Philadelphia", "2 Nigiri saumon", "6 Maki fromage"],
+    category: "menu-midi",
+    flags: ["signature"],
+    allergens: ["poisson", "lait", "soja", "gluten", "sesame", "sulfites"],
+    imageSlug: "menu-midi-assortiment",
+  },
+  {
+    slug: "midi-sashimi",
+    name: "Sashimi Midi",
+    priceEur: 16.9,
+    description: "Le poisson dans toute sa fraîcheur. Au choix : bol de riz vinaigré, salade de chou ou soupe miso.",
+    ingredients: [
+      "3 sashimi saumon",
+      "3 sashimi thon",
+      "2 sashimi maquereau",
+      "2 sashimi saumon aburi",
+      "2 sashimi maquereau aburi",
+    ],
+    category: "menu-midi",
+    flags: ["cru", "aburi"],
+    allergens: ["poisson", "soja", "sulfites"],
+    imageSlug: "menu-midi-sashimi",
+  },
+  {
+    slug: "midi-saumon",
+    name: "Saumon Midi",
+    priceEur: 16.9,
+    description: "Pour les amoureux du saumon écossais Label Rouge.",
+    ingredients: ["5 sashimi saumon", "2 nigiri saumon", "6 maki saumon"],
+    category: "menu-midi",
+    allergens: ["poisson", "soja", "sulfites", "gluten"],
+    imageSlug: "menu-midi-saumon",
+  },
+  {
+    slug: "midi-california",
+    name: "California Midi",
+    priceEur: 16.9,
+    description: "Au choix : 8 Philadelphia, 8 California classiques OU 8 Maguro (thon).",
+    ingredients: ["8 California rolls (au choix)"],
+    category: "menu-midi",
+    allergens: ["poisson", "lait", "soja", "gluten", "sesame", "sulfites"],
+    imageSlug: "menu-midi-california",
+  },
+  {
+    slug: "midi-chirashi",
+    name: "Chirashi Midi",
+    priceEur: 16.9,
+    description: "Bol généreux et coloré, salade de chou en accompagnement.",
+    ingredients: ["10 sashimi saumon", "Bol de riz kabayaki", "Salade de chou"],
+    category: "menu-midi",
+    flags: ["signature"],
+    allergens: ["poisson", "soja", "sulfites"],
+    imageSlug: "menu-midi-chirashi",
+  },
+  {
+    slug: "midi-coeur-de-sushi",
+    name: "Cœur de Sushi Midi",
+    priceEur: 16.9,
+    description: "Au choix : bol de riz vinaigré, salade de chou ou soupe miso.",
+    ingredients: ["8 California Philadelphia", "2 nigiri saumon"],
+    category: "menu-midi",
+    allergens: ["poisson", "lait", "soja", "gluten", "sesame", "sulfites"],
+    imageSlug: "menu-midi-coeur",
+  },
+  {
+    slug: "midi-maki",
+    name: "Maki Midi",
+    priceEur: 16.9,
+    description: "L'assortiment maki par excellence : végétal, terre et mer.",
+    ingredients: ["6 maki concombre fromage", "6 maki thon", "6 maki saumon"],
+    category: "menu-midi",
+    allergens: ["poisson", "lait", "soja", "gluten", "sulfites"],
+    imageSlug: "menu-midi-maki",
+  },
+];

@@ -1,0 +1,8 @@
+# Copier en .dev.vars (non versionné). Variables d'env dev local Workers.
+# Pour les vars publiques : utiliser wrangler.jsonc -> vars
+# Pour les secrets prod : wrangler secret put NOM
+
+# Resend (formulaire de contact)
+RESEND_API_KEY="re_XXXXXXXXXXXXX"
+# Optionnel : signature webhook bounces/complaints
+RESEND_WEBHOOK_SECRET="whsec_XXXXXXXXXXXXX"

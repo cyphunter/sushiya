@@ -1,0 +1,13 @@
+{
+  "name": "Sushi-Ya Vannes — Restaurant japonais",
+  "short_name": "Sushi-Ya",
+  "description": "Restaurant japonais à Vannes : sushis traditionnels et créations contemporaines.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfaf3",
+  "theme_color": "#c13b1f",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "sushiya",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-05-05",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+
+  "observability": {
+    "enabled": true
+  },
+
+  // ─── R2 (médias plats, ambiance, hero) ───────────────────────────────
+  // À créer avant deploy : wrangler r2 bucket create sushiya-media
+  "r2_buckets": [
+    {
+      "binding": "MEDIA_BUCKET",
+      "bucket_name": "sushiya-media"
+    }
+  ],
+
+  // ─── KV (cache court / formulaire anti-flood) ────────────────────────
+  // À créer avant deploy : wrangler kv namespace create sushiya-kv
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "TODO_REPLACE_WITH_REAL_KV_ID"
+    }
+  ],
+
+  // ─── Vars publiques ──────────────────────────────────────────────────
+  // SITE_ID = "sushiya" — réservé pour futur ajout DB partagée freelance-shared
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://sushiya-56.fr",
+    "SITE_ID": "sushiya",
+    "CONTACT_TO_EMAIL": "contact@sushiya-56.fr"
+  }
+
+  // ─── Secrets (à mettre via `wrangler secret put`) ────────────────────
+  // wrangler secret put RESEND_API_KEY
+  // wrangler secret put RESEND_WEBHOOK_SECRET (optionnel)
+
+  // ─── PAS de D1 ni d'auth : site vitrine pur ──────────────────────────
+}
