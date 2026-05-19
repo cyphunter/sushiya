@@ -7,7 +7,6 @@
 interface CloudflareEnv {
   ASSETS: Fetcher;
   MEDIA_BUCKET: R2Bucket;
-  KV: KVNamespace;
 
   // Vars publiques (wrangler.jsonc → vars)
   NEXT_PUBLIC_SITE_URL: string;

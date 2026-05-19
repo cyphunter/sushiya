@@ -24,14 +24,13 @@
     }
   ],
 
-  // ─── KV (cache court / formulaire anti-flood) ────────────────────────
-  // À créer avant deploy : wrangler kv namespace create sushiya-kv
-  "kv_namespaces": [
-    {
-      "binding": "KV",
-      "id": "TODO_REPLACE_WITH_REAL_KV_ID"
-    }
-  ],
+  // ─── KV ──────────────────────────────────────────────────────────────
+  // V1 vitrine pure : pas d'usage KV.
+  // Si besoin (cache court / anti-flood form contact) :
+  //   wrangler kv namespace create sushiya-kv
+  // puis réajouter ici :
+  //   "kv_namespaces": [{ "binding": "KV", "id": "<id réel>" }]
+  // et la propriété `KV: KVNamespace` dans cloudflare-env.d.ts.
 
   // ─── Vars publiques ──────────────────────────────────────────────────
   // SITE_ID = "sushiya" — réservé pour futur ajout DB partagée freelance-shared
