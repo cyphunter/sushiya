@@ -49,7 +49,7 @@ export function VedettesCarte({ items }: Props) {
               <div className="aspect-[4/3] overflow-hidden bg-deeper">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={item.imageSlug ? `/images/menu/${item.imageSlug}.webp` : "/images/menu/placeholder.webp"}
+                  src={item.imageSlug ? `/images/menu/${item.imageSlug}` : "/images/menu/placeholder.png"}
                   alt=""
                   className="h-full w-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
                   loading="lazy"

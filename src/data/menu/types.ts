@@ -39,7 +39,7 @@ export type MenuItem = {
   pieces?: number;
   flags?: ReadonlyArray<MenuFlag>;
   allergens?: ReadonlyArray<AllergenCode>;
-  /** Slug de l'image dans public/images/menu/<imageSlug>.webp (sans extension). */
+  /** Nom de fichier image (avec extension) dans public/images/menu/. */
   imageSlug?: string;
 };
 

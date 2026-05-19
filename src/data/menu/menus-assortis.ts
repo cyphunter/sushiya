@@ -126,6 +126,6 @@ export const menusAssortis: ReadonlyArray<MenuItem> = [
     category: "menu-assorti",
     flags: ["signature", "chef"],
     allergens: ["poisson", "crustaces", "soja", "sesame", "lait"],
-    imageSlug: "menu-omakase",
+    imageSlug: "menu-omakase.png",
   },
 ];

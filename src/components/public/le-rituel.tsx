@@ -109,7 +109,7 @@ export function LeRituel() {
                   <div className="relative aspect-[4/5] overflow-hidden border border-paper/15 bg-paper/5">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`/images/rituel/${step.imageSlug}.webp`}
+                      src={`/images/rituel/${step.imageSlug}`}
                       alt=""
                       className="h-full w-full object-cover opacity-90"
                       loading="lazy"

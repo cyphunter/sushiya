@@ -9,20 +9,20 @@ type Photo = {
 };
 
 const DEFAULT_PHOTOS: ReadonlyArray<Photo> = [
-  { src: "/images/ambiance/salle-1.webp", alt: "Salle du restaurant, ambiance tamisée", span: "tall" },
-  { src: "/images/ambiance/bar-sushi.webp", alt: "Comptoir sushi du chef", span: "square" },
-  { src: "/images/ambiance/chef-decoupe.webp", alt: "Découpe du poisson au couteau yanagiba", span: "wide" },
-  { src: "/images/ambiance/nappage-detail.webp", alt: "Détail dressage : plateau, baguettes, sauce soja", span: "square" },
-  { src: "/images/ambiance/facade.webp", alt: "Façade du restaurant rue Thomas de Closmadeuc", span: "tall" },
-  { src: "/images/ambiance/salle-2.webp", alt: "Vue d'ensemble de la salle, soir", span: "square" },
-  { src: "/images/ambiance/huitres-saveurs-japonaises.webp", alt: "Huîtres du golfe revisitées aux saveurs japonaises", span: "square" },
-  { src: "/images/ambiance/cafe-gourmand.webp", alt: "Café gourmand franco-japonais", span: "wide" },
+  { src: "/images/ambiance/salle-1.jpg", alt: "Salle du restaurant, ambiance tamisée", span: "tall" },
+  { src: "/images/ambiance/bar-sushi.jpg", alt: "Comptoir sushi du chef", span: "square" },
+  { src: "/images/ambiance/chef-decoupe.jpg", alt: "Découpe du poisson au couteau yanagiba", span: "wide" },
+  { src: "/images/ambiance/nappage-detail.png", alt: "Détail dressage : plateau, baguettes, sauce soja", span: "square" },
+  { src: "/images/ambiance/facade.jpg", alt: "Façade du restaurant rue Thomas de Closmadeuc", span: "tall" },
+  { src: "/images/ambiance/salle-2.jpg", alt: "Vue d'ensemble de la salle, soir", span: "square" },
+  { src: "/images/ambiance/huitres-saveurs-japonaises.jpg", alt: "Huîtres du golfe revisitées aux saveurs japonaises", span: "square" },
+  { src: "/images/ambiance/cafe-gourmand.png", alt: "Café gourmand franco-japonais", span: "wide" },
 ];
 
 const SPAN_CLASSES: Record<NonNullable<Photo["span"]>, string> = {
-  tall: "aspect-[3/4] md:row-span-2",
-  wide: "aspect-[16/10] md:col-span-2",
-  square: "aspect-square",
+  tall: "md:row-span-2",
+  wide: "md:col-span-2",
+  square: "",
 };
 
 type Props = {
@@ -45,7 +45,7 @@ export function AmbianceGallery({ photos = DEFAULT_PHOTOS, tone = "default" }: P
           title="Une intimité, un comptoir, un instant."
           intro="Le restaurant accueille une trentaine de couverts. Lumière douce, comptoir sushi en face du chef : on vient pour la cuisine, on reste pour le moment."
         />
-        <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 md:auto-rows-[180px]">
+        <div className="mt-14 grid grid-flow-dense grid-cols-2 auto-rows-[170px] gap-3 md:grid-cols-3 md:auto-rows-[220px] md:gap-4">
           {photos.map((photo, i) => (
             <Reveal
               key={photo.src}

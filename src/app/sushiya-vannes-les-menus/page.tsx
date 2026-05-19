@@ -52,7 +52,7 @@ export default function HubCartePage() {
                 <div className="aspect-[16/10] overflow-hidden bg-deeper">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`/images/menu/${section.heroImageSlug}.webp`}
+                    src={`/images/menu/${section.heroImageSlug}`}
                     alt=""
                     className="h-full w-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
                     loading="lazy"

@@ -11,7 +11,7 @@ export const desserts: ReadonlyArray<MenuItem> = [
     category: "dessert",
     flags: ["vegetarien"],
     allergens: ["gluten", "lait", "sesame", "soja"],
-    imageSlug: "mochi",
+    imageSlug: "mochi.png",
   },
   {
     slug: "mochis-glaces",
@@ -32,6 +32,6 @@ export const desserts: ReadonlyArray<MenuItem> = [
     category: "dessert",
     flags: ["signature", "vegetarien"],
     allergens: ["gluten", "lait", "oeufs", "fruits-coque"],
-    imageSlug: "cafe-gourmand",
+    imageSlug: "cafe-gourmand.png",
   },
 ];

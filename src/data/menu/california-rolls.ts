@@ -87,7 +87,7 @@ export const californiaRolls: ReadonlyArray<MenuItem> = [
     category: "california",
     flags: ["cru", "signature"],
     allergens: ["poisson", "lait", "soja"],
-    imageSlug: "california-philadelphia",
+    imageSlug: "california-philadelphia.jpg",
   },
   {
     slug: "california-gourmandise",

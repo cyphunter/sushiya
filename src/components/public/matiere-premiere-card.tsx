@@ -13,7 +13,7 @@ export function MatierePremiereCard({ item, index = 0 }: Props) {
         <div className="aspect-[4/3] overflow-hidden bg-deeper">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`/images/matieres/${item.imageSlug}.webp`}
+            src={`/images/matieres/${item.imageSlug}`}
             alt=""
             className="h-full w-full object-cover opacity-95 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
             loading="lazy"

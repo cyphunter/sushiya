@@ -54,6 +54,6 @@ export const entrees: ReadonlyArray<MenuItem> = [
     category: "entree",
     flags: ["signature", "cru"],
     allergens: ["poisson", "soja"],
-    imageSlug: "tartare-thon-truffe",
+    imageSlug: "tartare-thon-truffe.jpg",
   },
 ];

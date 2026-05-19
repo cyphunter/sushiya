@@ -12,7 +12,7 @@ export const nigiris: ReadonlyArray<MenuItem> = [
     category: "nigiri",
     flags: ["signature"],
     allergens: ["soja"],
-    imageSlug: "nigiri-wagyu",
+    imageSlug: "nigiri-wagyu.jpg",
   },
   {
     slug: "nigiri-boeuf-wagyu-aburi",

@@ -49,6 +49,6 @@ export const chirashis: ReadonlyArray<MenuItem> = [
     category: "chirashi",
     flags: ["signature", "chef"],
     allergens: ["poisson", "crustaces", "oeufs", "soja", "sulfites"],
-    imageSlug: "chirashi-traditionnel",
+    imageSlug: "chirashi-traditionnel.jpg",
   },
 ];

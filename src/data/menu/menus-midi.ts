@@ -14,7 +14,7 @@ export const menusMidi: ReadonlyArray<MenuItem> = [
     category: "menu-midi",
     flags: ["signature"],
     allergens: ["poisson", "lait", "soja", "gluten", "sesame", "sulfites"],
-    imageSlug: "menu-midi-assortiment",
+    imageSlug: "menu-midi-assortiment.png",
   },
   {
     slug: "midi-sashimi",
@@ -31,7 +31,7 @@ export const menusMidi: ReadonlyArray<MenuItem> = [
     category: "menu-midi",
     flags: ["cru", "aburi"],
     allergens: ["poisson", "soja", "sulfites"],
-    imageSlug: "menu-midi-sashimi",
+    imageSlug: "menu-midi-sashimi.jpg",
   },
   {
     slug: "midi-saumon",
@@ -41,7 +41,7 @@ export const menusMidi: ReadonlyArray<MenuItem> = [
     ingredients: ["5 sashimi saumon", "2 nigiri saumon", "6 maki saumon"],
     category: "menu-midi",
     allergens: ["poisson", "soja", "sulfites", "gluten"],
-    imageSlug: "menu-midi-saumon",
+    imageSlug: "menu-midi-saumon.jpg",
   },
   {
     slug: "midi-california",
@@ -51,7 +51,7 @@ export const menusMidi: ReadonlyArray<MenuItem> = [
     ingredients: ["8 California rolls (au choix)"],
     category: "menu-midi",
     allergens: ["poisson", "lait", "soja", "gluten", "sesame", "sulfites"],
-    imageSlug: "menu-midi-california",
+    imageSlug: "menu-midi-california.jpg",
   },
   {
     slug: "midi-chirashi",
@@ -62,7 +62,7 @@ export const menusMidi: ReadonlyArray<MenuItem> = [
     category: "menu-midi",
     flags: ["signature"],
     allergens: ["poisson", "soja", "sulfites"],
-    imageSlug: "menu-midi-chirashi",
+    imageSlug: "menu-midi-chirashi.jpg",
   },
   {
     slug: "midi-coeur-de-sushi",
@@ -72,7 +72,7 @@ export const menusMidi: ReadonlyArray<MenuItem> = [
     ingredients: ["8 California Philadelphia", "2 nigiri saumon"],
     category: "menu-midi",
     allergens: ["poisson", "lait", "soja", "gluten", "sesame", "sulfites"],
-    imageSlug: "menu-midi-coeur",
+    imageSlug: "menu-midi-coeur.png",
   },
   {
     slug: "midi-maki",
@@ -82,6 +82,6 @@ export const menusMidi: ReadonlyArray<MenuItem> = [
     ingredients: ["6 maki concombre fromage", "6 maki thon", "6 maki saumon"],
     category: "menu-midi",
     allergens: ["poisson", "lait", "soja", "gluten", "sulfites"],
-    imageSlug: "menu-midi-maki",
+    imageSlug: "menu-midi-maki.png",
   },
 ];

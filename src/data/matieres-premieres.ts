@@ -18,7 +18,7 @@ export const matieresPremieres: ReadonlyArray<MatierePremiere> = [
     origin: "Écosse · Label Rouge",
     description:
       "Élevé en haute mer dans les eaux froides des Highlands, le saumon Label Rouge offre une chair ferme, grasse à point et une saveur incomparable.",
-    imageSlug: "saumon-ecossais",
+    imageSlug: "saumon-ecossais.jpg",
   },
   {
     slug: "thon-albacore",
@@ -26,7 +26,7 @@ export const matieresPremieres: ReadonlyArray<MatierePremiere> = [
     origin: "Atlantique · ligne",
     description:
       "Un thon noble à la chair rosée, pêché à la ligne pour préserver sa texture. Idéal en nigiri, sashimi ou tartare à l'huile de truffe.",
-    imageSlug: "thon-albacore",
+    imageSlug: "thon-albacore.jpg",
   },
   {
     slug: "riz-camargue",
@@ -34,7 +34,7 @@ export const matieresPremieres: ReadonlyArray<MatierePremiere> = [
     origin: "Camargue · bio · français",
     description:
       "Variété japonaise cultivée en agriculture biologique en Camargue, vinaigré chaque jour selon la méthode traditionnelle edomae.",
-    imageSlug: "riz-camargue",
+    imageSlug: "riz-camargue.png",
   },
   {
     slug: "algue-nori",
@@ -42,7 +42,7 @@ export const matieresPremieres: ReadonlyArray<MatierePremiere> = [
     origin: "Bretagne · récolte locale",
     description:
       "Récoltées sur le littoral breton, séchées et grillées : nos algues Nori conjuguent tradition japonaise et terroir local.",
-    imageSlug: "algue-nori-bretagne",
+    imageSlug: "algue-nori-bretagne.png",
   },
 ];
 
@@ -60,13 +60,13 @@ export const specialites: ReadonlyArray<Specialite> = [
     name: "Huîtres du golfe du Morbihan",
     description:
       "Nos huîtres locales revisitées aux saveurs japonaises : ponzu, yuzu, gingembre frais. Une rencontre du terroir breton et de la finesse nippone, selon arrivage.",
-    imageSlug: "huitres-japonaises",
+    imageSlug: "huitres-japonaises.jpg",
   },
   {
     slug: "cafe-gourmand",
     name: "Café gourmand franco-japonais",
     description:
       "Notre signature : un classique de la bistronomie française décliné aux parfums asiatiques — mini-mochis, mignardise yuzu, mignardise matcha et café espresso.",
-    imageSlug: "cafe-gourmand",
+    imageSlug: "cafe-gourmand.png",
   },
 ];

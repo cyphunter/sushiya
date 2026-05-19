@@ -91,7 +91,7 @@ export default function LeRestaurantPage() {
                       <div className="aspect-[4/3] overflow-hidden border border-paper/15 bg-deep">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src={`/images/menu/${s.imageSlug}.webp`}
+                          src={`/images/menu/${s.imageSlug}`}
                           alt=""
                           className="h-full w-full object-cover opacity-90"
                           loading="lazy"

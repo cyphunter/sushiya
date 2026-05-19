@@ -11,7 +11,7 @@ export const sashimis: ReadonlyArray<MenuItem> = [
     category: "sashimi",
     flags: ["cru"],
     allergens: ["poisson"],
-    imageSlug: "sashimi-saumon",
+    imageSlug: "sashimi-saumon.jpg",
   },
   {
     slug: "sashimi-saumon-aburi-5pc",
@@ -101,6 +101,6 @@ export const sashimis: ReadonlyArray<MenuItem> = [
     category: "sashimi",
     flags: ["chef"],
     allergens: ["poisson", "sulfites"],
-    imageSlug: "sashimi-assortiment",
+    imageSlug: "sashimi-assortiment.png",
   },
 ];

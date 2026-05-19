@@ -58,7 +58,7 @@ export const menuSections: ReadonlyArray<MenuSectionDef> = [
     pageHref: routes.menu.menusMidi,
     shortBlurb:
       "Sept formules équilibrées à 16,90 € seulement, servies du mardi au vendredi midi.",
-    heroImageSlug: "menu-midi-assortiment",
+    heroImageSlug: "menu-midi-assortiment.png",
   },
   {
     slug: "california",
@@ -67,7 +67,7 @@ export const menuSections: ReadonlyArray<MenuSectionDef> = [
     pageHref: routes.menu.californiaRolls,
     shortBlurb:
       "De la classique Philadelphia à la création Gourmandise au chèvre-miel, 18 rolls signature.",
-    heroImageSlug: "california-philadelphia",
+    heroImageSlug: "california-philadelphia.jpg",
   },
   {
     slug: "maki",
@@ -76,7 +76,7 @@ export const menuSections: ReadonlyArray<MenuSectionDef> = [
     pageHref: routes.menu.sushis,
     shortBlurb:
       "L'art du sushi dans sa forme la plus pure : makis main, nigiris au millimètre, sashimis épurés, chirashis généreux.",
-    heroImageSlug: "nigiri-wagyu",
+    heroImageSlug: "nigiri-wagyu.jpg",
   },
   {
     slug: "menu-assorti",
@@ -85,7 +85,7 @@ export const menuSections: ReadonlyArray<MenuSectionDef> = [
     pageHref: routes.menu.menusAssortis,
     shortBlurb:
       "Huit menus individuels (du Coeur de Sushi à l'Omakase) et nos menus Découverte 2, 3 ou 4 personnes.",
-    heroImageSlug: "menu-omakase",
+    heroImageSlug: "menu-omakase.png",
   },
   {
     slug: "entree",
@@ -94,7 +94,7 @@ export const menuSections: ReadonlyArray<MenuSectionDef> = [
     pageHref: routes.menu.entreesDesserts,
     shortBlurb:
       "Tartare de thon à la truffe, soupes miso, salades, mochis traditionnels et notre café gourmand franco-japonais.",
-    heroImageSlug: "tartare-thon-truffe",
+    heroImageSlug: "tartare-thon-truffe.jpg",
   },
 ];
 
