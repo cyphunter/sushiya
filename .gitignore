@@ -13,7 +13,6 @@
 # OpenNext / Cloudflare
 /.open-next/
 /.wrangler/
-cloudflare-env.d.ts
 
 # Production
 /build
